@@ -1,12 +1,15 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var ejs = require('gulp-ejs');
+var ejsTemplate = require('gulp-ejs-template');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
-var sourcemaps = require('gulp-sourcemaps');
 var mainBowerFiles = require('main-bower-files');
 var path = require('path');
 var browserSync = require('browser-sync');
+var del = require('del');
+
+var templateData = require('./data/template-data.json');
 
 // set configuration
 var config = {
@@ -14,27 +17,23 @@ var config = {
 };
 
 // html
-gulp.task('html', function () {
+gulp.task('html', ['clean-html'], function () {
     var pages = gulp.src('./src/html/*.html')
+        .pipe(ejs(templateData))
         .pipe(gulp.dest('public'));
 });
 
 //js
-gulp.task('js', function() {
-  return gulp.src('./src/*.js')
+gulp.task('js', ['clean-js'], function() {
+  return gulp.src('./src/js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('./public/js'));
 });
 
 // less
-gulp.task('less', function () {
-  return gulp.src('./src/less/**/*.less')
-    .pipe(sourcemaps.init())
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'partials') ]
-    }))
-    .pipe(sourcemaps.write())
-    .pipe(minifyCSS())
+gulp.task('less', ['clean-css'], function () {
+  return gulp.src('./src/less/*.less')
+    .pipe(less())    
     .pipe(gulp.dest('./public/css'));
 });
 
@@ -55,6 +54,19 @@ gulp.task('img', function() {
 gulp.task('fonts', function() {    
     return gulp.src(['./src/fonts/**/*'])
         .pipe(gulp.dest('./public/fonts'));
+});
+
+// clean 
+gulp.task('clean-html', function(done) {
+    del(['./build/*.html'], done);
+});
+
+gulp.task('clean-js', function(done) {
+    del(['build/js/**/*.*'], done);
+});
+
+gulp.task('clean-css', function(done) {
+    del(['build/css/**/*.*'], done);
 });
 
 //browser-sync will reload when compiled versions change

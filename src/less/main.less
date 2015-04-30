@@ -1,13 +1,37 @@
+@import "./bower_components/bootstrap/less/bootstrap.less";
+@import "partials/_variables.less";
+@import "partials/_typography.less";
 @import "partials/_nav.less";
+
+/* bootstrap overrides */
 
 .container {
 	max-width: 1500px;
+    overflow: hidden;
 }
+
+.container-fluid {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* elements */
 
 button {
 	border: none;
 }
 
+/* global main*/
+
 #main {
-	margin-top: 80px; 
+	margin-top: 60px; 
+	padding-bottom: 130px;
+
+	&.active-modal {
+		-webkit-filter: blur(10px);
+	    -moz-filter: blur(10px);
+	    -o-filter: blur(10px);
+	    -ms-filter: blur(10px);
+	    filter: blur(10px);	    
+	}
 }

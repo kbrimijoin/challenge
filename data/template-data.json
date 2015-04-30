@@ -1,0 +1,33 @@
+{
+	"home" : {
+		"posts" : [
+			{
+				"name": "Sam Soffes",
+				"avatar": "img/home/avatar-1.png",
+				"text": "How to Get Inspired: the Right Way - Designmodo bit.ly/1hqgbQA Good stuff from @designmodo!How to Get Inspired: the Right Way - Designmodo <a href=\"bit.ly/1hqgbQA\">bit.ly/1hqgbQA</a> Good stuff from @designmodo!"
+			},
+			{
+				"name": "Meg Rochebaud",
+				"avatar": "img/home/avatar-2.png",
+				"text": "My view this morning is simply beautiful... <a href=\"instagram.com/p/mV0PUrHRwQ/\">instagram.com/p/mV0PUrHRwQ/</a>",
+				"image": "img/home/post-image-1.png"
+			},
+			{
+				"name": "Kerem Suer",
+				"avatar": "img/home/avatar-3.png",
+				"text": "8 Apps to Turn Your Pipe Dreams Into Prototypes <a href=\"on.mash.to/1oubyu8\">on.mash.to/1oubyu8</a>"
+			},
+			{
+				"name": "Liang Shi",
+				"avatar": "img/home/avatar-4.png",
+				"text": "How to get animations out of your head. <a href=\"http://bit.ly/1q7BngO\">http://bit.ly/1q7BngO</a>  Funny and useful."
+			},
+			{
+				"name": "Vitor Leal",
+				"avatar": "img/home/avatar-5.png",
+				"text": "You have to see this bike. It will make your daily commute a absolute joy ride! <a href=\"vimeo.com/p/mV0PUrHRwQ/\">vimeo.com/p/mV0PUrHRwQ/</a>",
+				"image": "img/home/post-image-2.png"
+			}
+		]
+	}
+}

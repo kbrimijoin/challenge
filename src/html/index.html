@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
@@ -8,27 +10,13 @@
     </head>
 
     <body>
-        <nav>
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="img/nav/logo.png" alt="Simply Social Logo" />
-                </div>
-                <div class="nav-items">
-                    <button class="new-message"></button>
-                    <div class="search"></div>
-                    <div class="avatar"></div>
-                </div>
-            </div>
-        </nav>
-        <div id="main">
-            <div id="home">
-                <header>
-
-                </header>
-            </div>
+        <%= include partials/_nav.html %>
+        <div id="main" class="active-modal">
+            <%= include partials/_home.html %>
         </div>
-        
+        <%= include partials/_modal-create.html %>
     </body>
 
     <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </html>

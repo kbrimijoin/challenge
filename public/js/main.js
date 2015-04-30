@@ -1,0 +1,1 @@
+$(function(){$(window).scroll(function(){$(window).scrollTop()>0&&$("nav").animate({height:80},200)}),$(".new-message").click(function(){})});

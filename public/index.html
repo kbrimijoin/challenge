@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
@@ -9,26 +11,115 @@
 
     <body>
         <nav>
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="img/nav/logo.png" alt="Simply Social Logo" />
-                </div>
-                <div class="nav-items">
-                    <button class="new-message"></button>
-                    <div class="search"></div>
-                    <div class="avatar"></div>
-                </div>
-            </div>
-        </nav>
-        <div id="main">
+    <div class="nav-content">
+        
+        <div class="logo">
+            <img src="img/nav/logo.png" alt="Simply Social Logo" />
+        </div>
+        <div class="nav-items">
+            <button class="new-message"></button>
+            <div class="hidden-xs search"></div>
+            <div class="hidden-xs avatar"></div>
+        </div>
+    </div>        
+</nav>
+        <div id="main" class="active-modal">
             <div id="home">
-                <header>
-
-                </header>
+    <div class="container-fluid">
+        <div class="row">
+            <header>                    
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 new-entry">
+                        <h2>What's on your mind?</h2>
+                        <img src="img/home/new-entry-buttons.png" alt="New entry buttons" />
+                    </div>
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 nav">
+                        <div class="nav-item active">All Posts</div>
+                        <div class="nav-item">Photos</div>
+                        <div class="nav-item">Videos</div>
+                        <div class="view-toggle"></div>
+                    </div>                
+            </header>
+            <div class="posts">
+                
+                   <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 post">
+                        <div class="avatar">
+                            <img src="img/home/avatar-1.png" />
+                        </div>                        
+                        <div class="content">
+                            <p>Sam Soffes</p>
+                            <div class="ctas"></div>
+                            <p>How to Get Inspired: the Right Way - Designmodo bit.ly/1hqgbQA Good stuff from @designmodo!How to Get Inspired: the Right Way - Designmodo <a href="bit.ly/1hqgbQA">bit.ly/1hqgbQA</a> Good stuff from @designmodo!</p>
+                        </div>
+                        
+                   </div>
+                
+                   <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 post">
+                        <div class="avatar">
+                            <img src="img/home/avatar-2.png" />
+                        </div>                        
+                        <div class="content">
+                            <p>Meg Rochebaud</p>
+                            <div class="ctas"></div>
+                            <p>My view this morning is simply beautiful... <a href="instagram.com/p/mV0PUrHRwQ/">instagram.com/p/mV0PUrHRwQ/</a></p>
+                        </div>
+                        
+                        <div class="post-image" style="background-image: url(img/home/post-image-1.png)"></div>
+                        
+                   </div>
+                
+                   <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 post">
+                        <div class="avatar">
+                            <img src="img/home/avatar-3.png" />
+                        </div>                        
+                        <div class="content">
+                            <p>Kerem Suer</p>
+                            <div class="ctas"></div>
+                            <p>8 Apps to Turn Your Pipe Dreams Into Prototypes <a href="on.mash.to/1oubyu8">on.mash.to/1oubyu8</a></p>
+                        </div>
+                        
+                   </div>
+                
+                   <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 post">
+                        <div class="avatar">
+                            <img src="img/home/avatar-4.png" />
+                        </div>                        
+                        <div class="content">
+                            <p>Liang Shi</p>
+                            <div class="ctas"></div>
+                            <p>How to get animations out of your head. <a href="http://bit.ly/1q7BngO">http://bit.ly/1q7BngO</a>  Funny and useful.</p>
+                        </div>
+                        
+                   </div>
+                
+                   <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 post">
+                        <div class="avatar">
+                            <img src="img/home/avatar-5.png" />
+                        </div>                        
+                        <div class="content">
+                            <p>Vitor Leal</p>
+                            <div class="ctas"></div>
+                            <p>You have to see this bike. It will make your daily commute a absolute joy ride! <a href="vimeo.com/p/mV0PUrHRwQ/">vimeo.com/p/mV0PUrHRwQ/</a></p>
+                        </div>
+                        
+                        <div class="post-image" style="background-image: url(img/home/post-image-2.png)"></div>
+                        
+                   </div>
+                
             </div>
         </div>
-        
+    </div>
+</div>
+        </div>
+        <div class="modal-create">
+	<div class="container">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 modal">			
+		<button class="close-modal"></button>
+		</div>
+		
+	</div>
+</div>
     </body>
 
     <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </html>

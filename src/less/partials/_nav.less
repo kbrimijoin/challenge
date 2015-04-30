@@ -4,6 +4,7 @@ nav {
 	position: fixed;
 	top: 0;
 	background: url(../img/home/home-header-bg.png) no-repeat 0 60px;
+	z-index: 1;
 
 	.nav-content {
 		height: 60px;
@@ -13,12 +14,12 @@ nav {
 	.logo {
 		position: absolute;
 		top: 18px;
-		left: 100px;
+		left: 20px;
 	}
 	.nav-items {
 		position: absolute;
 		top: 14px;
-		right: 100px;
+		right: 20px;
 		> div {
 			display: inline-block;
 		}
@@ -39,5 +40,14 @@ nav {
 			margin-left: 18px;
 			background: url('../img/nav/avatar.png') no-repeat;	
 		}
+	}
+}
+
+@media (min-width: @screen-sm-min) {
+	.logo {
+		left: 100px;
+	}
+	.nav-items {
+		right: 100px;
 	}
 }
